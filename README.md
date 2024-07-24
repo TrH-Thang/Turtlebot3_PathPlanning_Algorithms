@@ -34,6 +34,7 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ### 3. Launch Navigation with different Path Planning algorithms
 To enable navigation with different path planning algorithms, run the following command:
 ```bash
+export TURTLEBOT3_MODEL=waffle
 roslaunch path_planning path_planning.launch
 ```
 It will open a rviz window select 2D Nav Goal button and select the goal position on the map.
