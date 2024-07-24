@@ -1,11 +1,10 @@
 global_costmap:
-   global_frame: map
-   robot_base_frame: base_link
-   update_frequency: 0.2 #1.0
-   publish_frequency: 0.2
-   transform_tolerance: 0.5
-   static_map: true
+  global_frame: map
+  robot_base_frame: base_footprint
 
-# uncomment to remove the need for an a priori map
-#   plugins: []
+  update_frequency: 10.0
+  publish_frequency: 10.0
+  transform_tolerance: 0.5
 
+  static_map: true
+ 
