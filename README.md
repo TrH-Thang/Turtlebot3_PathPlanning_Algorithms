@@ -1,7 +1,8 @@
 # Path Planning Repository for custom robot
 
 ## Overview
-This repository utilizes path planning algorithms for navigation. This README provides instructions on how to set up and run the simulation. Follow this website for more details: https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/
+This repository utilizes path planning algorithms for navigation. This README provides instructions on how to set up and run the simulation. 
+Follow this website for more details: https://wiki.ros.org/ROS/Tutorials
 
 ## Setup
 
@@ -9,15 +10,12 @@ This repository utilizes path planning algorithms for navigation. This README pr
 Clone the Turtlebot3 and path planning repositories using the following commands:
 
 ```bash
+cd ~/catkin_ws/src
 https://github.com/ROBOTIS-GIT/turtlebot3.git
-```
-```bash
 https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-```
-```bash
 https://github.com/TrH-Thang/Turtlebot3_PathPlanning_Algorithms.git
+catkin_make
 ```
-after cloning do catkin_make
 
 ### 2. Launch Simulation
 Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
@@ -41,3 +39,4 @@ roslaunch path_planning path_planning.launch
 It will open a rviz window select 2D Nav Goal button and select the goal position on the map.
 
 In the path_planning/scripts/path_planning_server.py file, locate line 42 and change the algorithm to your desired one (e.g., astar, dijkstra, rrt).
+
