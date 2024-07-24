@@ -1,4 +1,4 @@
-# Path Planning Repository for custom robot
+# Path Planning Repository for custom Turtlebot3
 
 ## Overview
 This repository utilizes path planning algorithms for navigation. This README provides instructions on how to set up and run the simulation. 
