@@ -1,25 +1,37 @@
 # Path Planning Repository for custom robot
 
 ## Overview
-This repository utilizes path planning algorithms for navigation. This README provides instructions on how to set up and run the simulation.
+This repository utilizes path planning algorithms for navigation. This README provides instructions on how to set up and run the simulation. Follow this website for more details: https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/
 
 ## Setup
 
 ### 1. Clone Repository
-Clone the Navogenius and path planning repositories using the following commands:
+Clone the Turtlebot3 and path planning repositories using the following commands:
 
 ```bash
-git clone https://github.com/bitcurious/NavoGenius.git
+https://github.com/ROBOTIS-GIT/turtlebot3.git
 ```
 ```bash
-git clone https://github.com/bitcurious/Path-Planning.git
+https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+```
+```bash
+https://github.com/TrH-Thang/Turtlebot3_PathPlanning_Algorithms.git
 ```
 after cloning do catkin_make
 
 ### 2. Launch Simulation
-opem a terminal and run following command
+Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+ex:
+
+open a terminal and run following command
 ```bash
-roslaunch myrobot_description gazebo.launch
+export TURTLEBOT3_MODEL=waffle
+```
+then:
+
+```bash
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 ### 3. Launch Navigation with different Path Planning algorithms
 To enable navigation with different path planning algorithms, run the following command:
@@ -28,14 +40,4 @@ roslaunch path_planning path_planning.launch
 ```
 It will open a rviz window select 2D Nav Goal button and select the goal position on the map.
 
-![Astar](https://github.com/bitcurious/Path-Planning/blob/master/videos/Screenshot%20from%202023-12-20%2016-31-19.png)
-
 In the path_planning/scripts/path_planning_server.py file, locate line 42 and change the algorithm to your desired one (e.g., astar, dijkstra, rrt).
-
-### 4. RRT
-
-![RRT](https://github.com/bitcurious/Path-Planning/blob/master/videos/RRT.png)
-
-### 5. Dijkstra
-
-![Dijkstra](https://github.com/bitcurious/Path-Planning/blob/master/videos/Dijkstra.png)
